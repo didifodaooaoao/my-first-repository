@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+img::selection{
+    background-color: transparent;
+}
+
+::selection{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: clamp(1rem, 2vw, 2rem);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 16px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 12px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+
+        a{
+            color: white;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+    }   
+        a:hover{
+            opacity: 1;
+        }
+
+    img{
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 12px;
+        backdrop-filter: blur(2px);
+        cursor: pointer;
+    }
+}
+
+.starter{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    padding: clamp(8rem, 16vh, 12rem) clamp(1.5rem, 12vw, 12rem) clamp(4rem, 10vh, 8rem);
+    text-align: center;
+    
+    p{
+        font-family: "Cinzel", serif;
+        font-weight: 400;
+        font-size: clamp(0.85rem, 1.8vw, 1.25rem);
+        line-height: 1.5;
+    }
+
+    img{
+        width: min(100%, 54rem);
+        margin-bottom: clamp(2rem, 6vw, 4.25rem);
+        
+    }
+}
+
+.barraDivisoria{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.divWho{
+    --content-line: rgba(255, 255, 255, 0.16);
+    --content-muted: rgba(255, 255, 255, 0.68);
+    --content-accent: #3d3d3d;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 7rem clamp(1.5rem, 6vw, 6rem);
+}
+
+.divWho > div{
+    padding: 3.75rem 0 4.5rem;
+    border-top: 1px solid var(--content-line);
+}
+
+.divWho > div:first-child{
+    padding-top: 0;
+    border-top: 0;
+}
+
+.divWho > div:last-child{
+    padding-bottom: 0;
+}
+
+.divWho section{
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 2fr);
+    column-gap: clamp(2rem, 8vw, 9rem);
+    align-items: start;
+}
+
+.divWho h2{
+    grid-column: 1;
+    max-width: 12rem;
+    padding-top: 1.4rem;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.8rem, 3vw, 3.25rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.divWho p,
+.divWho .list2{
+    grid-column: 2;
+    max-width: 48rem;
+}
+
+.divWho p{
+    color: var(--content-muted);
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
+    line-height: 1.85;
+}
+
+.divWho p + p,
+.divWho .list2 + p{
+    margin-top: 1.15rem;
+}
+
+.divWho strong{
+    color: #fff;
+    font-weight: 600;
+}
+
+.divWho .list2{
+    margin: 1.5rem 0 0;
+    padding: 1.5rem 0 1.5rem 1.4rem;
+    border-left: 2px solid var(--content-accent);
+}
+
+.divWho ul{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.divWho li{
+    position: relative;
+    padding-left: 1.1rem;
+    color: var(--content-muted);
+    line-height: 1.5;
+}
+
+.divWho li::before{
+    content: "";
+    position: absolute;
+    top: 0.58rem;
+    left: 0;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--content-accent);
+}
+
+.filosofia strong{
+    display: inline-block;
+    color: white;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    letter-spacing: 0.12em;
+}
+
+.ecossistema p:last-child strong{
+    display: inline-block;
+    border-left: 2px solid var(--content-accent);
+    padding-left: 1.2rem;
+    font-size: clamp(1.1rem, 1.65vw, 1.45rem);
+    line-height: 1.5;
+}
+
+@media (max-width: 760px){
+    .divWho{
+        padding: 4.5rem 1.5rem;
+    }
+
+    .divWho > div{
+        padding: 3rem 0 3.5rem;
+    }
+
+    .divWho section{
+        display: block;
+    }
+
+    .divWho h2{
+        max-width: none;
+        padding: 0;
+        margin-bottom: 1.75rem;
+    }
+
+    .divWho ul{
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    padding: clamp(2.5rem, 6vw, 4rem);
+}
+
+.divFooterLeft {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    img{
+        height: 240px;
+    }
+}
+
+.divFooterRight{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding: 0;
+}
+
+.lang{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 8px;
+
+    a{
+        color: white;
+        opacity: 0.6;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    a:hover{
+            opacity: 1;
+        }
+}
+
+.copyright{ 
+    padding: 0;
+    margin-top: 0;
+}
+
+@media (max-width: 900px){
+    .starter{
+        min-height: 82svh;
+    }
+
+    footer{
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 600px){
+    header{
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    header img{
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+
+    header ul{
+        gap: 0;
+        padding: 0.3rem;
+    }
+
+    header ul a{
+        display: block;
+        padding: 0.5rem;
+        font-size: 0.78rem;
+    }
+
+    .starter{
+        min-height: 72svh;
+        padding-top: 7rem;
+        padding-bottom: 3.5rem;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        padding: 3.5rem 1.5rem;
+    }
+
+    .divFooterRight{
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .lang{
+        margin: 2rem 0;
+    }
+
+    .copyright{
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
